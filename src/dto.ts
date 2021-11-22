@@ -5,7 +5,7 @@ import { IsString } from 'class-validator';
 export class Dto {
     @ApiProperty()
     @IsString()
-    id: string;
+    _id: string;
     @ApiProperty()
     @IsString()
     phrase: string;

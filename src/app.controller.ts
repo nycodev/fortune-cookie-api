@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 import { Dto } from './dto';
 
 
-@Controller('cookie')
+@Controller('cookies')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
@@ -13,6 +13,12 @@ export class AppController {
       dto,
     );
     return dtoResponse;
+  }
+
+  @Get()
+  async findRandom(): Promise<string> {
+    const dtoResponse = await this.appService.findRandom()
+    return dtoResponse.phrase;
   }
 
   @Get('show-all')
@@ -27,7 +33,7 @@ export class AppController {
     return dtoResponse;
   }
 
-  @Patch(':id') 
+    @Patch(':id') 
     async update(
       @Param('id') id: string,
       @Body() dto: Dto,

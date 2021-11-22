@@ -26,6 +26,10 @@ export class AppService {
     return this.fortuneModel.findById(id);
   }
 
+  async findRandom(): Promise<FortuneEntity> {
+    return this.fortuneModel.findById((Math.ceil(Math.random() * 30)).toString())
+  }
+
   async update(
     id: string,
     updateDto: UpdateDto,) : Promise<FortuneEntity> {

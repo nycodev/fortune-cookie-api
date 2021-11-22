@@ -6,7 +6,7 @@ export type FortuneDocument = FortuneEntity & Document;
 @Schema()
 export class FortuneEntity {
     @Prop()
-    id: string;
+    _id: string;
     @Prop()
     phrase: string;
 }
