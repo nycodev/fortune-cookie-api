@@ -46,10 +46,5 @@ export class AppController {
   async remove(@Param('id') id: string): Promise<void> {
     await this.appService.remove(id);
   }
-  
 
-  @Get()
-  getPhrase(): object {
-    return this.appService.getPhrase();
-  }
 }

@@ -1,3 +1,7 @@
-A simple API that simulates a fortune cookie opening
+A simple API that simulates a fortune cookie opening.
 
-Built on NESTJS
+Technologies used:
+Node.js
+NestJS framework running on express (not fastify)
+MongoDB
+
